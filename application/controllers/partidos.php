@@ -10,7 +10,6 @@ class Partidos extends MY_Controller {
 
     public function index ()
     {
-        
         echo "index partidos";
     }
     

@@ -47,7 +47,11 @@ $route["candidatos-por-estado/(:any)"]  = "candidatos/estado/$1/";
 $route["candidatos/(:any)"]             = "candidatos/perfil/$1";
 $route["candidatos/"]                   = "candidatos/index/";
 
-$route["eleitores/(:any)/"]  = "eleitores/perfil/$1";
+$route["eleitores/(:any)/"]             = "eleitores/perfil/$1";
+
+$route["default_controller"]            = "projeto/index/";
+$route["sobre"]                         = "projeto/sobre/";
+
 $route['404_override']      = '';
 
 
