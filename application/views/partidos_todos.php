@@ -16,6 +16,8 @@
   <strong><?php echo count($partidos);?></strong> partidos encontrados.
 </div>
 <?php } ?>
+
+<?php if        (count($partidos) > 0) { ?>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -47,3 +49,4 @@
         <?php } ?>
     </tbody>
 </table>
+<?php } ?>
