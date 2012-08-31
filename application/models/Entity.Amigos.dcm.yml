@@ -1,0 +1,29 @@
+Entity\Amigos:
+  type: entity
+  table: amigos
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    fbuid:
+      type: bigint
+      nullable: true
+    nome:
+      type: string
+      length: 145
+      fixed: false
+      nullable: true
+  oneToOne:
+    usuario:
+      targetEntity: Entity\Usuario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        usuario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

@@ -1,0 +1,36 @@
+Entity\Comentario:
+  type: entity
+  table: comentario
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    classificacao:
+      type: boolean
+      nullable: true
+    comentario:
+      type: text
+      nullable: true
+  oneToOne:
+    usuario:
+      targetEntity: Entity\Usuario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        usuario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+    candidato:
+      targetEntity: Entity\Candidato
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        candidato_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

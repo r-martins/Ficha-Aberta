@@ -1,0 +1,30 @@
+Entity\PartidoSeguir:
+  type: entity
+  table: partido_seguir
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+  oneToOne:
+    partido:
+      targetEntity: Entity\Partido
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        partido_id:
+          referencedColumnName: id
+      orphanRemoval: false
+    usuario:
+      targetEntity: Entity\Usuario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        usuario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

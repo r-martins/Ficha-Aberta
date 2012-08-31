@@ -1,0 +1,21 @@
+Entity\Partido:
+  type: entity
+  table: partido
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    sigla:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+    nome:
+      type: string
+      length: 145
+      fixed: false
+      nullable: true
+  lifecycleCallbacks: {  }

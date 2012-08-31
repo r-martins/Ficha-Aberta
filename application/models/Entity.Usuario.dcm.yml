@@ -1,0 +1,32 @@
+Entity\Usuario:
+  type: entity
+  table: usuario
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    nome:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+    email:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+    fbuid:
+      type: bigint
+      nullable: false
+    fbtoken:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+    cadastro:
+      type: datetime
+      nullable: false
+  lifecycleCallbacks: {  }

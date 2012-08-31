@@ -1,6 +1,3 @@
-Ficha-Aberta
-============
-
 Projeto Ficha Aberta - Criado no Facebook World HackDay SP
 
 Autores
@@ -9,4 +6,3 @@ Autores
 **David Ruiz <wupsbr@gmail.com>**
 
 **Ricardo Martins <ricardo@ricardomartins.info>**
-

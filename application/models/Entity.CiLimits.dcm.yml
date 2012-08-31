@@ -1,0 +1,32 @@
+Entity\CiLimits:
+  type: entity
+  table: ci_limits
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    uri:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    count:
+      type: integer
+      unsigned: false
+      nullable: false
+    hourStarted:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: hour_started
+    apiKey:
+      type: string
+      length: 40
+      fixed: false
+      nullable: false
+      column: api_key
+  lifecycleCallbacks: {  }

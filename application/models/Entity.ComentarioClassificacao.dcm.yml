@@ -1,0 +1,36 @@
+Entity\ComentarioClassificacao:
+  type: entity
+  table: comentario_classificacao
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    classificacao:
+      type: boolean
+      nullable: true
+    created:
+      type: datetime
+      nullable: false
+  oneToOne:
+    comentario:
+      targetEntity: Entity\Comentario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        comentario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+    usuario:
+      targetEntity: Entity\Usuario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        usuario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

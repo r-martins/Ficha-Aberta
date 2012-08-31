@@ -1,0 +1,34 @@
+Entity\UsuarioRecomenda:
+  type: entity
+  table: usuario_recomenda
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    icRecomenda:
+      type: boolean
+      nullable: true
+      column: ic_recomenda
+  oneToOne:
+    candidato:
+      targetEntity: Entity\Candidato
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        candidato_id:
+          referencedColumnName: id
+      orphanRemoval: false
+    usuario:
+      targetEntity: Entity\Usuario
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        usuario_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

@@ -1,0 +1,44 @@
+Entity\CiLogs:
+  type: entity
+  table: ci_logs
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    uri:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    method:
+      type: string
+      length: 6
+      fixed: false
+      nullable: false
+    params:
+      type: text
+      nullable: true
+    apiKey:
+      type: string
+      length: 40
+      fixed: false
+      nullable: false
+      column: api_key
+    ipAddress:
+      type: string
+      length: 45
+      fixed: false
+      nullable: false
+      column: ip_address
+    time:
+      type: integer
+      unsigned: false
+      nullable: false
+    authorized:
+      type: boolean
+      nullable: false
+  lifecycleCallbacks: {  }

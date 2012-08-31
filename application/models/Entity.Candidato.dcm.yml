@@ -1,0 +1,75 @@
+Entity\Candidato:
+  type: entity
+  table: candidato
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    nome:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+    nomeUrna:
+      type: string
+      length: 145
+      fixed: false
+      nullable: false
+      column: nome_urna
+    candidatura:
+      type: string
+      length: 1
+      fixed: true
+      nullable: false
+    numero:
+      type: bigint
+      nullable: false
+    situacao:
+      type: string
+      length: 45
+      fixed: false
+      nullable: true
+    cargoAtual:
+      type: string
+      length: 45
+      fixed: false
+      nullable: true
+      column: cargo_atual
+    sexo:
+      type: string
+      length: 45
+      fixed: false
+      nullable: true
+    dtNascimento:
+      type: datetime
+      nullable: true
+      column: dt_nascimento
+    coligacao:
+      type: string
+      length: 145
+      fixed: false
+      nullable: true
+    cidade:
+      type: string
+      length: 145
+      fixed: false
+      nullable: true
+    uf:
+      type: string
+      length: 2
+      fixed: true
+      nullable: true
+  oneToOne:
+    partido:
+      targetEntity: Entity\Partido
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        partido_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }
