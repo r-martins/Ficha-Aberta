@@ -38,10 +38,17 @@
 |
 */
 
-$route['default_controller'] = "welcome";
-$route["vote/(:num)/"]       = "blog/vote/$1";
-$route["vote/(:num)"]        = "blog/vote/$1";
-$route['404_override'] = '';
+$route['partidos-por-estado/(:any)']    = "partidos/estado/$1/";
+$route['partidos/(:any)']               = "partidos/perfil/$1/";
+$route['partidos/']                     = "partidos/index/";
+
+$route["candidatos-por-partido/(:any)"] = "candidatos/partido/$1/";
+$route["candidatos-por-estado/(:any)"]  = "candidatos/estado/$1/";
+$route["candidatos/(:any)"]             = "candidatos/perfil/$1";
+$route["candidatos/"]                   = "candidatos/index/";
+
+$route["eleitores/(:any)/"]  = "eleitores/perfil/$1";
+$route['404_override']      = '';
 
 
 /* End of file routes.php */

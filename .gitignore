@@ -4,3 +4,4 @@ application/config/config.php
 application/config/database.php
 
 application/logs/log-2012-08-31.php
+/nbproject/private/
