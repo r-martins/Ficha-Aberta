@@ -1,4 +1,7 @@
-<h2><?php echo $candidato[0]->getNomeUrna(); ?></h2>
+<h2><?php echo $candidato[0]->getNomeUrna(); ?> 
+-
+<a href="../../partidos/<?php echo $candidato[0]->getPartido()->getSigla(); ?>"><?php echo $candidato[0]->getPartido()->getSigla(); ?></a>
+</h2>
 
 <?php if        (count($candidato) == 0) { ?>
 <div class="alert">
@@ -10,7 +13,7 @@
     <thead>
         <tr>
           <th>N&uacute;mero: </th>
-          <td><?php echo $candidato[0]->getNumero(); ?></td>
+          <td><?php echo $candidato[0]->getPartido()->getNome(); ?></td>
         </tr>
         <tr>
           <th>Nome do Candidato</th>
