@@ -1,12 +1,16 @@
 <div class="row">
   <div class="span8"><h2><?php echo $partido->getSigla();?></h2></div>
-  <div class="span4"><a class="btn btn-primary pull-right">
+  <div class="span4">
       <?php if ($seguindo) { ?>
-          Seguir
+      <a href="?seguir=0" class="btn btn-primary pull-right">
+          Deixar de Seguir
+      </a>
       <? } else { ?>
-          Deixar Seguir
+      <a href="?seguir=1" class="btn btn-primary pull-right">
+          Seguir
+      </a>
       <? } ?>
-</a></div>
+</div>
 </div>
 
 
@@ -26,4 +30,32 @@
   <button type="button" class="close" data-dismiss="alert">×</button>
   <strong><?php echo count($candidatos);?></strong> candidatos encontrados.
 </div>
+<?php } ?>
+
+<br/>
+
+<h2>Amigos que seguem este partido</h2>
+<?php if ($this->session->userdata("usuario_logado",false)) { ?>
+    <?php if (count($amigos) > 0) { ?>
+     <div class="row-fluid">
+                <ul class="thumbnails">
+        <?php 
+
+            for ($x=0;$x<count($amigos);$x++) {
+                $usuario = $amigos[$x]->getUsuario();
+        ?>
+                  <li class="span3">
+                    <a href="http://www.facebook.com/<?php echo $usuario->getFbuid();?>/" class="thumbnail">
+                      <img src="https://graph.facebook.com/<?php echo $usuario->getFbuid();?>/picture?type=normal" alt="<?php echo $usuario->getNome();?>">
+                    </a>
+                  </li>
+        <?php } ?>
+
+                </ul>
+              </div>
+    <?php } else { ?>
+    <p>Nenhum amigo segue este partido.</p>
+    <?php } ?>
+<?php } else { ?>
+<p>Você precisa estar logado para isto!</p>
 <?php } ?>

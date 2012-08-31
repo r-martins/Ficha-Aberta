@@ -4,10 +4,16 @@
   <head>
     <meta charset="utf-8">
     <title>Ficha Aberta</title>
+    <?php if (isset($metas)) { ?>
+    <meta property="og:type" content="fichaaberta:<?php echo $metas["type"];?>">
+    <meta property="og:url" content="<?php echo $metas["url"];?>">
+    <meta property="og:title" content="<?php echo $metas["title"];?>">
+    <meta property="og:image" content="<?php echo $metas["image"];?>">
+    <meta property="og:description" content="<?php echo $metas["description"];?>">
+    <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <!-- Le styles -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/fichaaberta.css" rel="stylesheet">
