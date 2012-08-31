@@ -10,11 +10,11 @@ class Partidos extends MY_Controller {
 
     public function index ()
     {
-        $partidos  = $this->em->getRepository('Entity\Partido')->findAll(array("order"=>"sigla"));
-        var_dump($partidos);
-        exit;
+        $q        = $this->em->createQuery('SELECT p FROM Entity\Partido p ORDER BY p.sigla ASC');
+        $partidos = $q->getResult();
+
         $this->load->view("template/header");
-        $this->load->view("partidos_todos");
+        $this->load->view("partidos_todos", array("partidos" => $partidos));
         $this->load->view("template/footer");
     }
     
