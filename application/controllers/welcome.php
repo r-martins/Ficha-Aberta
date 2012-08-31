@@ -19,7 +19,7 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
-		$u = new Entity\User();
+		$u = new Entity\Usuario();
 		
         $this->load->view('welcome_message');
 
