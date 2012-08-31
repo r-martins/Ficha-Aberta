@@ -13,10 +13,21 @@ class Candidatos extends MY_Controller {
         echo "index candidatos";
     }
     
-    public function perfil ($nomePartido)
+    public function perfil ($idCandidato)
     {
         
-        echo "perfil candidato " . $nomePartido;
+        // echo "perfil candidato " . $idCandidato;
+
+        $q        = $this->em->createQuery('SELECT c FROM Entity\Candidato c WHERE c.id = :id ORDER BY c.nomeUrna ASC');
+        $q->setParameters(array(
+                'id' => $idCandidato
+            ));
+
+        $candidato = $q->getResult();
+
+        $this->load->view("template/header");
+        $this->load->view("candidatos_perfil", array("candidato" => $candidato));
+        $this->load->view("template/footer");
     }
     
     public function estado ($nomeEstado)
