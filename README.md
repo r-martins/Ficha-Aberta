@@ -1,4 +1,4 @@
-Projeto Ficha Aberta - Criado no Facebook World HackDay SP
+Projeto Ficha Aberta - Criado no Facebook World Hack - São Paulo
 
 Autores
 ============
