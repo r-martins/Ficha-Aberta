@@ -1,19 +1,18 @@
-
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
           <h2>David Ruiz</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>Gerente de inovação na Timepix Interactive, co-fundador do livre.fm e rush points | Curador da área de desenvolvimento da Campus Party Brasil</p>
+          <p><div class="fb-subscribe" data-href="https://www.facebook.com/wupsbr" data-layout="box_count" data-show-faces="false" data-font="arial" data-width="60"></div></p>
         </div>
         <div class="span4">
           <h2>Ricardo Martins</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>Programador Magento/e-commerce (PHP, .NET, etc). Responsável pelo Blog do Desenvolvedor, e depto. de e-commerce Timepix Interactive.</p>
+          <p><div class="fb-subscribe" data-href="https://www.facebook.com/ricardomartins.info" data-layout="box_count" data-show-faces="false" data-width="60"></div></p>
        </div>
         <div class="span4">
           <h2>Michell Zappa</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>Technology Futurist responsible for @envisioningtech (Public speaker, researcher, designer)</p>
+          <p><div class="fb-subscribe" data-href="https://www.facebook.com/michellzappa" data-layout="box_count" data-show-faces="false" data-width="60"></div></p>
         </div>
       </div>

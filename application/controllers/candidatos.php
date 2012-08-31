@@ -10,7 +10,6 @@ class Candidatos extends MY_Controller {
 
     public function index ()
     {
-        
         echo "index candidatos";
     }
     
@@ -30,4 +29,10 @@ class Candidatos extends MY_Controller {
         echo "listando candidatos por partido  " . $nomePartido;
     }
     
+    public function rede ()
+    {
+        $this->api->somenteLogado();
+        
+        
+    }
 }

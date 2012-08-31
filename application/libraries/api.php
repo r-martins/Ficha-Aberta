@@ -20,7 +20,8 @@ class Api
 	 * 
 	 */
 	private $_errorCodes;
-	
+	private $_CI;
+        
 	
 	/**
 	 *	@method __construct
@@ -45,9 +46,20 @@ class Api
                 100             =>      "Id do jogador inválido ou não informado",
                 101             =>      "Jogador não encontrado",
                     
-		);	
+		);
+                
+                $this->_CI = &get_instance();
 	}
 
+        
+        public function somenteLogado()
+        {
+            if (!$this->_CI->session->userdata("usuario_logado",false))
+            {
+                redirect(base_url()."login/?back=" . urlencode($_SERVER["REQUEST_URI"]));
+                exit;
+            }
+        }
 	/**
 	 *	@method ok
 	 *	@desc	Método para montar a resposta padrão.

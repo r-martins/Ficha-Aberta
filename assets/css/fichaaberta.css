@@ -1,0 +1,17 @@
+/* 
+    Document   : fichaaberta
+    Created on : 31/08/2012, 16:28:54
+    Author     : wupsbr
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+.fblogin{
+    
+    margin-top: 6px;
+}

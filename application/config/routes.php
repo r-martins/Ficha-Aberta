@@ -42,15 +42,22 @@ $route['partidos-por-estado/(:any)']    = "partidos/estado/$1/";
 $route['partidos/(:any)']               = "partidos/perfil/$1/";
 $route['partidos/']                     = "partidos/index/";
 
-$route["candidatos-por-partido/(:any)"] = "candidatos/partido/$1/";
-$route["candidatos-por-estado/(:any)"]  = "candidatos/estado/$1/";
+$route["candidatos/por-partido/(:any)"] = "candidatos/partido/$1/";
+$route["candidatos/na-minha-rede"]      = "candidatos/rede/";
+$route["candidatos/por-partido"]        = "candidatos/partidos/";
+$route["candidatos/por-estado/(:any)"]  = "candidatos/estado/$1/";
+$route["candidatos/por-estado"]         = "candidatos/estados/";
 $route["candidatos/(:any)"]             = "candidatos/perfil/$1";
-$route["candidatos/"]                   = "candidatos/index/";
+$route["candidatos"]                     = "candidatos/index/";
 
 $route["eleitores/(:any)/"]             = "eleitores/perfil/$1";
 
 $route["default_controller"]            = "projeto/index/";
 $route["sobre"]                         = "projeto/sobre/";
+
+$route["login"]                         = "conta/login/";
+$route["facebook"]                      = "conta/facebook/";
+$route["logout"]                        = "conta/logout/";
 
 $route['404_override']      = '';
 
