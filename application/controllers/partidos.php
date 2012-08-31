@@ -20,9 +20,10 @@ class Partidos extends MY_Controller {
     
     public function perfil ($nomePartido="")
     {
-        $q = $this->em->createQuery('SELECT p FROM Entity\Partido p WHERE p.sigla = :sigla ORDER BY p.sigla ASC');
+        $q = $this->em->createQuery('SELECT p FROM Entity\Partido p WHERE p.sigla = :sigla OR p.sigla = :sigla2 ORDER BY p.sigla ASC');
         $q->setParameters(array(
              'sigla' => $nomePartido,
+             'sigla2' => str_replace("-", " ", $nomePartido),
         ));
         $partidos = $q->getResult();
         
