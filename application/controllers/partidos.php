@@ -10,7 +10,12 @@ class Partidos extends MY_Controller {
 
     public function index ()
     {
-        echo "index partidos";
+        $partidos  = $this->em->getRepository('Entity\Partido')->findAll(array("order"=>"sigla"));
+        var_dump($partidos);
+        exit;
+        $this->load->view("template/header");
+        $this->load->view("partidos_todos");
+        $this->load->view("template/footer");
     }
     
     public function perfil ($nomePartido)
