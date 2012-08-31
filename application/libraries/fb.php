@@ -20,8 +20,8 @@ class Fb
         require_once 'facebook-sdk/facebook.php';
 
         $this->_facebook = new Facebook(array(
-          'appId'  => '138950392913487',
-          'secret' => 'b072eb2ca218004ea77ff32ae61d3a17',
+          'appId'  => '',
+          'secret' => '',
         ));
     }
 
