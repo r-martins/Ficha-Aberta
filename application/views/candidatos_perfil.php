@@ -35,5 +35,9 @@
           <th>Coliga&ccedil;&atilde;o</th>
           <td><?php echo $candidato[0]->getColigacao(); ?></td>
         </tr>
-    </thead>   </table>
+    </thead>   
+</table>
 <?php } ?>
+
+<h2>Comente!</h2>
+<div class="fb-comments" data-href="<?php echo base_url() . substr($_SERVER["REQUEST_URI"],1,strlen($_SERVER["REQUEST_URI"])-1);?>" data-num-posts="2" data-width="960"></div>

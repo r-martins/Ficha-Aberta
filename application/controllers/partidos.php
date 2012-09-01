@@ -77,6 +77,7 @@ class Partidos extends MY_Controller {
                     $s->setPartido($partidos[0]);
                     $s->setUsuario($usuario[0]);
                     $seguindo = true;
+                    $this->em->persist($s);
                 }
                 else if ($seguindo && $this->input->get("seguir") == "0")
                 {
@@ -91,7 +92,7 @@ class Partidos extends MY_Controller {
         $graph = array();
         $graph["type"]         = "partido";
         $graph["title"]        = $partidos[0]->getSigla();
-        $graph["description"]  = "Perfil do Partido";
+        $graph["description"]  = "Perfil do Partido " . $partidos[0]->getSigla();
         $graph["image"]        = base_url() . "assets/img/spacer.gif";
         $graph["url"]          = base_url() . "partidos/" . str_replace(" ", "-", strtolower($partidos[0]->getSigla())) . "/";
         
